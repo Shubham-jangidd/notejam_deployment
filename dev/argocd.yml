@@ -9,7 +9,7 @@ spec:
   source:
         targetRevision: HEAD
         repoURL: https://github.com/Shubham-jangidd/notejam_deployment.git
-        path: 
+        path: dev
   destination:
     server: https://kubernetes.default.svc
     namespace: mynotejamapp
