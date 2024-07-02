@@ -1,0 +1,21 @@
+steps to deploy argo cd
+
+1 kubectl create namespace argocd
+
+2 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+3 these two command will create argocd pod in kubernetes cluster
+
+4 now check that all the  pods are in running state using kubectl get pods -n argocd
+
+5 kubectl port-forward svc/argocd-server -n argocd 8080:443   
+
+6 now you can access the dashboard at localhost:8080
+
+7 kubectl get secret argocd-initial-admin-secret -n argocd -o yaml | base64 --decode         to get the password and username is admin
+
+now push the updated data and argocd file to git hub with all the updated configuration then
+
+8 kubectl apply -f argocd.yml
+
+9 it will sync all the data from the github repo and will deploy the respective pods
