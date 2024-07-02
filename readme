@@ -18,6 +18,6 @@ now to copy the password and type echo passwordhere | base64 --decode           
 
 now push the updated data and argocd file to git hub with all the updated configuration then
 
-8 kubectl apply -f argocd.yml
+8 kubectl apply -f argocd.yml     in the dev dir
 
 9 it will sync all the data from the github repo and will deploy the respective pods
