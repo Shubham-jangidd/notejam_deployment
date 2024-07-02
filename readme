@@ -12,7 +12,9 @@ steps to deploy argo cd
 
 6 now you can access the dashboard at localhost:8080
 
-7 kubectl get secret argocd-initial-admin-secret -n argocd -o yaml | base64 --decode         to get the password and username is admin
+7 kubectl get secret argocd-initial-admin-secret -n argocd -o yaml          to get the password 
+
+now to copy the password and type echo passwordhere | base64 --decode            the output you get it the password and username is admin
 
 now push the updated data and argocd file to git hub with all the updated configuration then
 
